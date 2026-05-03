@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>박준식 · AI 컨설턴트 & 강사</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #0a0e1a; color: #e8e8e8; }
+
+    /* HERO */
+    .hero {
+      padding: 64px 40px 52px;
+      text-align: center;
+      border-bottom: 1px solid #141e33;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,99,235,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* 사진 링 */
+    .photo-wrap {
+      width: 156px; height: 156px;
+      border-radius: 50%;
+      margin: 0 auto 28px;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .photo-glow {
+      position: absolute; inset: -14px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(56,189,248,0.18) 0%, transparent 70%);
+      animation: pulse 3s ease-in-out infinite;
+    }
+    .photo-ring1 {
+      position: absolute; inset: -6px; border-radius: 50%;
+      background: conic-gradient(#0ea5e9 0%, #2563eb 25%, #7c3aed 50%, #2563eb 75%, #0ea5e9 100%);
+      animation: spin 4s linear infinite;
+      filter: blur(1px);
+    }
+    .photo-ring2 {
+      position: absolute; inset: -2px; border-radius: 50%;
+      background: conic-gradient(#38bdf8 0%, #818cf8 50%, #38bdf8 100%);
+      animation: spin 4s linear infinite reverse;
+      opacity: 0.7;
+    }
+    .photo-inner {
+      position: relative; z-index: 2;
+      width: 148px; height: 148px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #0a0e1a;
+    }
+    .photo-inner img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 8%;
+      border-radius: 50%;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+    .hero-name { font-size: 34px; font-weight: 500; color: #f0f4ff; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .hero-title { font-size: 14px; color: #60a5fa; margin-bottom: 18px; letter-spacing: 1px; }
+    .hero-tagline { font-size: 13.5px; color: #94a3b8; line-height: 1.9; max-width: 480px; margin: 0 auto 28px; }
+
+    .pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .pill { font-size: 12px; padding: 6px 16px; border: 1px solid #1e2d4a; border-radius: 20px; color: #7dd3fc; background: #0d1530; text-decoration: none; }
+
+    /* 섹션 */
+    .section { padding: 48px 40px; border-bottom: 1px solid #141e33; }
+    .section-label { font-size: 11px; letter-spacing: 2px; color: #3b82f6; text-transform: uppercase; margin-bottom: 28px; }
+
+    /* 타임라인 */
+    .tl-item { display: flex; gap: 20px; padding-bottom: 28px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-left { display: flex; flex-direction: column; align-items: center; min-width: 12px; }
+    .tl-dot { width: 12px; height: 12px; border-radius: 50%; background: #2563eb; flex-shrink: 0; margin-top: 5px; }
+    .tl-line { width: 1px; background: #1e2d4a; flex: 1; margin-top: 6px; }
+    .tl-year { font-size: 12px; color: #3b82f6; min-width: 90px; padding-top: 4px; flex-shrink: 0; }
+    .tl-title { font-size: 15px; font-weight: 500; color: #e2e8f0; margin-bottom: 6px; line-height: 1.5; }
+    .tl-desc { font-size: 13px; color: #64748b; line-height: 1.7; }
+
+    /* 인용구 */
+    .quote { background: #0d1530; border-left: 3px solid #2563eb; border-radius: 0 8px 8px 0; padding: 24px 28px; font-size: 15px; color: #94a3b8; line-height: 1.9; font-style: italic; }
+
+    /* 연락 */
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .contact-card { background: #0d1530; border: 1px solid #1e2d4a; border-radius: 10px; padding: 20px; }
+    .contact-label { font-size: 11px; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .contact-card a { color: #60a5fa; text-decoration: none; font-size: 14px; }
+
+    footer { padding: 24px 40px; text-align: center; font-size: 12px; color: #334155; background: #060910; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="photo-wrap">
+      <div class="photo-glow"></div>
+      <div class="photo-ring1"></div>
+      <div class="photo-ring2"></div>
+      <div class="photo-inner">
+        <img src="https://park-landing-2026.vercel.app/profile.jpg" alt="박준식 프로필" />
+      </div>
+    </div>
+    <div class="hero-name">박 준 식</div>
+    <div class="hero-title">AI 컨설턴트 &amp; 강사 · 공공평가 심사위원</div>
+    <div class="hero-tagline">
+      현대자동차 R&amp;D 연구본부에서 34년간 내연기관부터 하이브리드·전기차 구동계까지,<br>
+      파워트레인 개발의 전 과정을 이끌어왔습니다.<br>
+      이제는 그 경험을 바탕으로 산업 현장에 AI를 접목하는 실질적인 변화를 만들어갑니다.
+    </div>
+    <div class="pills">
+      <a class="pill" href="mailto:pjs9167@gmail.com">✉ pjs9167@gmail.com</a>
+      <a class="pill" href="tel:01089047310">📞 010-8904-7310</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">경력</div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-year">2026 – 현재</div>
+      <div>
+        <div class="tl-title">AI 컨설턴트 &amp; 강사 · 공공평가 심사위원</div>
+        <div class="tl-desc">AI 기술 기업 자문 및 산업 현장 AI 도입 컨설팅<br>기업·기관 대상 강의 · 공공평가 심사 참여</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot"></div></div>
+      <div class="tl-year">1991 – 2024</div>
+      <div>
+        <div class="tl-title">현대자동차 R&amp;D 연구개발본부 팀장</div>
+        <div class="tl-desc">34년간 내연기관·하이브리드·전기차 구동계 파워트레인 연구 개발 수행<br>엔진 기능 시험, 전기차 안전 검증, 팀 리더십</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="quote">
+      "34년간 현장에서 쌓아온 엔지니어링 경험을 바탕으로,<br>
+      AI 기술이 산업 현장과 일상에 실질적인 변화를 만들 수 있도록<br>
+      컨설팅과 교육으로 함께 만들어가고자 합니다."
+    </div>
+  </div>
+
+  <div class="section" style="border-bottom: none;">
+    <div class="section-label">연락하기</div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-label">이메일</div>
+        <a href="mailto:pjs9167@gmail.com">pjs9167@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-label">전화</div>
+        <a href="tel:01089047310">010-8904-7310</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>박준식 © 2026</footer>
+
+</body>
+</html>
