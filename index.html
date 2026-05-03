@@ -92,10 +92,11 @@
     .quote { background: #0d1530; border-left: 3px solid #2563eb; border-radius: 0 8px 8px 0; padding: 24px 28px; font-size: 15px; color: #94a3b8; line-height: 1.9; font-style: italic; }
 
     /* 연락 */
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    .contact-card { background: #0d1530; border: 1px solid #1e2d4a; border-radius: 10px; padding: 20px; }
-    .contact-label { font-size: 11px; color: #3b82f6; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
-    .contact-card a { color: #60a5fa; text-decoration: none; font-size: 14px; }
+    .tagline { font-size: 14px; color: #94a3b8; line-height: 1.9; margin-bottom: 4px; }
+    .contact-btn { display: inline-block; padding: 12px 28px; background: #2563eb; color: #fff; border-radius: 6px; font-size: 14px; font-weight: 500; text-decoration: none; }
+    .contact-btn:hover { background: #1d4ed8; }
+    .contact-btn-outline { background: transparent; color: #60a5fa; border: 1px solid #2563eb; }
+    .contact-btn-outline:hover { background: #1e3a5f; }
 
     footer { padding: 24px 40px; text-align: center; font-size: 12px; color: #334155; background: #060910; }
   </style>
@@ -113,17 +114,23 @@
     </div>
     <div class="hero-name">박 준 식</div>
     <div class="hero-title">AI 컨설턴트 &amp; 강사 · 공공평가 심사위원</div>
-    <div class="hero-tagline">
-      현대자동차 R&amp;D 연구본부에서 34년간 내연기관부터 하이브리드·전기차 구동계까지,<br>
-      파워트레인 개발의 전 과정을 이끌어왔습니다.<br>
-      이제는 그 경험을 바탕으로 산업 현장에 AI를 접목하는 실질적인 변화를 만들어갑니다.
-    </div>
     <div class="pills">
       <a class="pill" href="mailto:pjs9167@gmail.com">✉ pjs9167@gmail.com</a>
       <a class="pill" href="tel:01089047310">📞 010-8904-7310</a>
     </div>
   </div>
 
+  <!-- 소개 -->
+  <div class="section">
+    <div class="tagline">
+      34년간 현장에서 쌓은 엔지니어링 경험을 바탕으로,<br>
+      내연기관부터 전기차까지 파워트레인 개발의 전 과정을 이끌었습니다.<br>
+      이제는 AI 컨설턴트·강사로서 산업 현장과 교육 현장을 잇고,<br>
+      AI가 실질적인 변화를 만드는 길을 함께 열어갑니다.
+    </div>
+  </div>
+
+  <!-- 경력 -->
   <div class="section">
     <div class="section-label">경력</div>
     <div class="tl-item">
@@ -131,7 +138,7 @@
       <div class="tl-year">2026 – 현재</div>
       <div>
         <div class="tl-title">AI 컨설턴트 &amp; 강사 · 공공평가 심사위원</div>
-        <div class="tl-desc">AI 기술 기업 자문 및 산업 현장 AI 도입 컨설팅<br>기업·기관 대상 강의 · 공공평가 심사 참여</div>
+        <div class="tl-desc">AI 기술 기업 자문 및 산업 현장 AI 도입 컨설팅<br>기업·기관 대상 · 공공평가 심사 참여</div>
       </div>
     </div>
     <div class="tl-item">
@@ -144,25 +151,21 @@
     </div>
   </div>
 
+  <!-- 학력 & 자격증 -->
   <div class="section">
-    <div class="quote">
-      "34년간 현장에서 쌓아온 엔지니어링 경험을 바탕으로,<br>
-      AI 기술이 산업 현장과 일상에 실질적인 변화를 만들 수 있도록<br>
-      컨설팅과 교육으로 함께 만들어가고자 합니다."
+    <div class="section-label">학력 &amp; 자격증</div>
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <div style="font-size:14px; color:#e2e8f0;">고려대학교 대학원 동력공학 석사</div>
+      <div style="font-size:14px; color:#e2e8f0;">ITQ (한글/엑셀/파워포인트)</div>
     </div>
   </div>
 
+  <!-- 연락하기 -->
   <div class="section" style="border-bottom: none;">
     <div class="section-label">연락하기</div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-label">이메일</div>
-        <a href="mailto:pjs9167@gmail.com">pjs9167@gmail.com</a>
-      </div>
-      <div class="contact-card">
-        <div class="contact-label">전화</div>
-        <a href="tel:01089047310">010-8904-7310</a>
-      </div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="mailto:pjs9167@gmail.com" class="contact-btn">✉ 이메일 문의</a>
+      <a href="tel:01089047310" class="contact-btn contact-btn-outline">📞 전화 연결</a>
     </div>
   </div>
 
